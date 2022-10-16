@@ -1,0 +1,2 @@
+module middle_test {
+}
