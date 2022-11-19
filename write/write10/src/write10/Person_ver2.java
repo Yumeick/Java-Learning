@@ -5,11 +5,11 @@ import java.time.format.*;
 import java.util.*;
 
 @SuppressWarnings("unused")
-public class Person {
+public class Person_ver2 {
 	protected String name= new String();  //定义一个名字
 	LocalDateTime birthday=LocalDateTime.now();  //定义一个日期
 		
-	public Person(){
+	public Person_ver2(){
 		Random r= new Random();  //定义一个随机数对象
 		this.birthday= randomDate();
 		this.name= randomName();

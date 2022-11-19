@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.Random;
 import java.util.*;
 
-
 public class Example {
     public static void main(String[] args) {
         //Part 2  产生10个Person，用List保存，然后遍历输出。  
@@ -14,7 +13,7 @@ public class Example {
         int i3=0;
         while(i3<10){
             Person p=new Person();
-            int num=0;  //计数变量
+            int num=0;  //计数
             //实现类似于python里的list的not in
             //遍历list，如果出现重复值，计数变量num会少加1次，以此作为是否重复的判断标准
             for(int j=0; j<i3; j++){
@@ -35,7 +34,7 @@ public class Example {
             Person p=(Person)per;
             p.introduce();
         }
-        System.out.println();  //分隔
+        System.out.println();  
         
 
 
@@ -46,8 +45,8 @@ public class Example {
         ArrayList listr= new ArrayList();  //定义一个存放随机数的列表
         //不考虑随机挑选后再次出现重复元素的情况
         for (int i4=0; i4<4; i4++){
-            int rand= r.nextInt(list.size());  //生成随机数
-            listr.add(list.get(rand));  //将随机数加入随机列表中
+            int rand= r.nextInt(list.size());
+            listr.add(list.get(rand));
         }
         for(int i4=0; i4< listr.size(); i4++){
             for (int j=0; j< ratio; j++){
@@ -55,19 +54,19 @@ public class Example {
                 p.introduce();
             }
         }
-        System.out.println();  //分隔
+        System.out.println();  
 
         //Part 5  遍历2中的List，并将元素加入到一个集合Set。
         System.out.println("第五题：");
-        HashSet<Person> set=new HashSet<Person>();  //定义一个集合set
+        HashSet<Person> set=new HashSet<Person>();
+
         //遍历2中的List
         for (int i5=0; i5<list.size(); i5++){
             Person p=(Person)list.get(i5);
             p.introduce();
-            set.add(p);  //将List中的元素加入到集合set中
+            set.add(p);
         }
-        System.out.println();  //分隔
-
+        System.out.println();  
         //Part 6  遍历Set输出，观察Set中是否存在重复元素。
         System.out.println("第六题：");
         for (Object obj:set){
