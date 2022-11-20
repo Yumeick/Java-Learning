@@ -44,29 +44,35 @@ public class Example {
         int ratio= 2;  //生成重复元素的个数
         ArrayList listr= new ArrayList();  //定义一个存放随机数的列表
         //不考虑随机挑选后再次出现重复元素的情况
+        //TODO: 随机挑选4个不重复的Person
         for (int i4=0; i4<4; i4++){
             int rand= r.nextInt(list.size());
-            listr.add(list.get(rand));
+            for (int j=0; j< ratio; j++){
+            Person p=(Person)list.get(rand);
+            p.introduce();
+            }
         }
+        /*
         for(int i4=0; i4< listr.size(); i4++){
             for (int j=0; j< ratio; j++){
                 Person p= (Person)listr.get(i4);
                 p.introduce();
             }
-        }
+        }        
+         */
         System.out.println();  
 
         //Part 5  遍历2中的List，并将元素加入到一个集合Set。
-        System.out.println("第五题：");
+        //System.out.println("第五题：");
         HashSet<Person> set=new HashSet<Person>();
-
         //遍历2中的List
         for (int i5=0; i5<list.size(); i5++){
             Person p=(Person)list.get(i5);
-            p.introduce();
+            //p.introduce();
             set.add(p);
         }
-        System.out.println();  
+        //System.out.println();
+
         //Part 6  遍历Set输出，观察Set中是否存在重复元素。
         System.out.println("第六题：");
         for (Object obj:set){
