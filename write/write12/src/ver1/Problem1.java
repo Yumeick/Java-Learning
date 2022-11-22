@@ -3,7 +3,7 @@ import java.io.*;
 public class Problem1 {
     public static void main(String[] args) throws Exception{
         String rpath="D:/Work/CODE/git/Java-Learning/write/write12/src/ver1/Problem1.txt";
-        //字节流拷贝
+        //字节流拷贝:FileInputStream FileOutputStream
         String wpath1="D:/Work/CODE/git/Java-Learning/write/write12/src/ver1/Problem1_out1.txt";
         FileInputStream in= new FileInputStream(rpath);
         FileOutputStream out= new FileOutputStream(wpath1);
